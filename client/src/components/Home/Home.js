@@ -7,7 +7,7 @@ const Home = props =>
       <a name="top"></a>
       <div className="android-be-together-section mdl-typography--text-center">
         <div className="logo-font android-slogan">Rocket Stats</div>
-        <div className="logo-font android-sub-slogan">Your source for rocket league stats data and item infomation.</div>
+        <div className="logo-font android-sub-slogan">Your source for Rocket League stats data and item infomation.</div>
       </div>
       <div className="android-customized-section">
         <div className="android-customized-section-text">
@@ -15,7 +15,7 @@ const Home = props =>
           <p className="mdl-typography--font-light">
             Find out how you stack up against other players, get your stats today. Search items, and build up your favorites into a list!
             <br />
-            <a href="/items" className="android-link mdl-typography--font-light">Find Items</a>
+            <a href="/items" className="android-link mdl-typography--font-light">GET STATS!</a>
           </p>
         </div>
         <div className="android-customized-section-image"></div>

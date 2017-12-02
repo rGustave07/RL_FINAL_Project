@@ -24,13 +24,13 @@ class Stats extends React.Component {
     return <div>
       <a name="top"></a>
       <div className="android-be-together-section mdl-typography--text-center">
-        
+
         <ContainerCard title="Stats Search">
           <div className="flex">
             <form action="#">
               <div className="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                 <input className="mdl-textfield__input" type="text" id="sample3" onChange={this.handleText} value={this.state.id} />
-                <label className="mdl-textfield__label" htmlFor="sample3">Enter Id</label>
+                <label className="mdl-textfield__label" htmlFor="sample3">Enter Steam ID</label>
               </div>
             </form>
             <Button disabled={!!!this.state.id} onClick={this.handleSubmit.bind(this)} ripple={true}> Submit </Button>
@@ -72,7 +72,7 @@ class Stats extends React.Component {
               </tr>
             </tbody>
           </table>)
-          } 
+          }
         </ContainerCard>
       </div>
     </div>
