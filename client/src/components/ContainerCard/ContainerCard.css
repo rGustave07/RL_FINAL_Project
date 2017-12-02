@@ -1,0 +1,76 @@
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mdl-card__title-text {
+  text-transform: capitalize;
+}
+
+.nyr-copy {
+  max-width: 800px;
+}
+
+.dash-card-wide.mdl-card {
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dash-card-wide.orange-shadow {
+  -webkit-box-shadow: -11px 10px 0px -2px lightblue;
+          box-shadow: -11px 10px 0px -2px lightblue;
+}
+
+.mdl-color--primary {
+  background-color: #FDD835 !important;
+}
+
+.mdl-color--accent {
+  background-color: #8E24AA !important;
+}
+
+@media (max-width: 1024px) {
+  .dash-card-wide.mdl-card {
+    width: 632px;
+  }
+  .nyr-copy {
+    max-width: 488px;
+  }
+}
+
+@media (max-width: 720px) {
+  .dash-card-wide.mdl-card {
+    width: 528px;
+  }
+  .nyr-copy {
+    max-width: 376px;
+  }
+}
+
+@media (max-width: 600px) {
+  .dash-card-wide.mdl-card {
+    width: 460px;
+  }
+  .nyr-copy {
+    max-width: 360px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dash-card-wide.mdl-card {
+    width: 360px;
+  }
+  .nyr-copy {
+    max-width: 280px;
+  }
+  .nyr-logo {
+    width: 96px;
+    height: 96px;
+    margin-bottom: 64px;
+  }
+  .mdl-layout__header {
+    max-height: 128px;
+  }
+}
