@@ -19,9 +19,12 @@
 }
 
 .android-title {
-  color: #767777;
+  color: #000000;
 }
 
+.statsTitle {
+  color: #000000;
+}
 .android-mobile-title {
   display: none !important;
 }
@@ -37,16 +40,16 @@
 }
 
   .android-header .material-icons {
-    color: #767777 !important;
+    color: #000000 !important;
   }
 
   .android-header .mdl-layout__drawer-button {
     background: transparent;
-    color: #767777;
+    color: #000000;
   }
 
   .android-header .mdl-navigation__link {
-    color: #757575;
+    color: #000000;
     font-weight: 700;
     font-size: 14px;
   }

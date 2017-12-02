@@ -6,7 +6,7 @@ const Header = props =>
   <HeaderMDL waterfall={true}>
     <HeaderRow className="android-header">
       <span className="android-title mdl-layout-title">
-        <a href="/">Rocket Stats</a>
+        <a class="statsTitle" href="/">Rocket Stats</a>
       </span>
       <Spacer />
       <div className="android-navigation-container">
