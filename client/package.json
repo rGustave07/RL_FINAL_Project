@@ -4,8 +4,10 @@
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
+    "concurrently": "^3.5.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "react-mdl": "^1.11.0",
     "react-scripts": "1.0.14"
   },
   "scripts": {

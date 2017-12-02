@@ -43,7 +43,7 @@ class Items extends React.Component {
     return <div>
       <a name="top"></a>
       <div className="android-be-together-section mdl-typography--text-center">
-
+        
         <ContainerCard title="Stats Search">
           <div className="flex">
             <form action="#">

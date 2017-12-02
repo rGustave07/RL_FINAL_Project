@@ -6,7 +6,7 @@
   "scripts": {
     "server": "node server.js",
     "client": "cd client && npm run start",
-    "start": "./node_modules/.bin/concurrently \"./node_modules/.bin/nodemon\" \"npm run client\"",
+    "start": ".\\node_modules\\.bin\\concurrently \".\\node_modules\\.bin\\nodemon\" \"npm run client\" \"npm run server\"",
     "build": "cd client && npm run build",
     "deploy": "yarn build && git add . && git commit -m \"Building for production\" && git push heroku master",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,6 +18,13 @@
     "nodemon": "^1.11.0"
   },
   "dependencies": {
-    "express": "^4.15.4"
+    "axios": "^0.17.1",
+    "body-parser": "^1.18.2",
+    "concurrently": "^3.5.1",
+    "csv-parse": "^2.0.0",
+    "express": "^4.15.4",
+    "mongoose": "^4.13.5",
+    "path": "^0.12.7",
+    "react-router-dom": "^4.2.2"
   }
 }
