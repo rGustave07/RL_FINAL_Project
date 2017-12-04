@@ -9,5 +9,18 @@ module.exports = {
               res.json(returnModel)
           })
           .catch(err => res.status(422).json(err));
+    },
+
+    additem: (entry) => {
+        db.Item
+          .create(entry)
+          .then( () => {
+              console.log('success');
+          })
+          .catch( err => {
+              if (err) {
+                  console.log(err);
+              }
+          });
     }
 }

@@ -19,22 +19,24 @@ if (process.env.NODE_ENV === "production") {
 
 app.use(routes);
 
-// // Set up promises with mongoose
-// mongoose.Promise = global.Promise;
-// // Connect to the Mongo DB
-// mongoose.connect("mongodb://localhost/rlitems",
-//   {
-//     useMongoClient: true
-//   }
-// );
+// Set up promises with mongoose
+mongoose.Promise = global.Promise;
+// Connect to the Mongo DB
+mongoose.connect("mongodb://localhost/rlitems",
+  {
+    useMongoClient: true
+  }
+);
 
-// mongoose.connection.on('connected', function(){
-//   console.log('mongoose is connected');
-// });
+mongoose.connection.on('connected', function(){
+  console.log('mongoose is connected');
+});
 
-// mongoose.connection.on('error', function(err) {
-//    console.log('error: ', err);
-// });
+mongoose.connection.on('error', function(err) {
+   console.log('error: ', err);
+});
+
+
 
 app.listen(PORT, function() {
   console.log(`🌎 ==> Server now on port ${PORT}!`);
