@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const axios = require('axios');
 const items = require("./csv");
+const iC = require('../../controller/itemsController');
 
 function findNameMatch(name, obj) {
   let matches = [];
@@ -9,15 +10,14 @@ function findNameMatch(name, obj) {
     const reg = new RegExp(name,"i");
     matches = matches.concat(obj[x].filter(e => reg.test(e)));
   }
-
   return matches;
 }
 
 router.route("/category/:category")
-  .get((req, res) => res.json(items[req.params.category]));
+  .get((req, res) => res.json(iC.finditem(req.params.category)));
 
 router.route("/name/:name")
-  .get((req, res) => res.json(findNameMatch(req.params.name, items)));
+  .get((req, res) => res.json(iC.finditem(req.params.category)));
 
 
 module.exports = router;

@@ -17,10 +17,14 @@ module.exports = {
           .then( () => {
               console.log('success');
           })
-          .catch( err => {
-              if (err) {
-                  console.log(err);
-              }
-          });
+    },
+
+    finditem: (entry) => {
+        db.Item
+          .find({})
+          .then( (data) => {
+              return data;
+              console.log(data);
+          })
     }
 }
