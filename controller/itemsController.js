@@ -11,7 +11,7 @@ module.exports = {
           .catch(err => res.status(422).json(err));
     },
 
-    additem: (entry) => {
+    additem: (req, res) => {
         db.Item
           .create(entry)
           .then( () => {

@@ -14,10 +14,10 @@ function findNameMatch(name, obj) {
 }
 
 router.route("/category/:category")
-  .get((req, res) => res.json(iC.finditem(req.params.category)));
+      .get((req, res) => res.json("Success"));
 
 router.route("/name/:name")
-  .get((req, res) => res.json(iC.finditem(req.params.category)));
+      .get( (req, res) => res.json("Success"));
 
 
 module.exports = router;

@@ -1,6 +1,6 @@
 const router = require("express").Router();
-const infoRoutes = require("./info");
-const itemsRoutes = require("./items");
+const infoRoutes = require("./info.js");
+const itemsRoutes = require("./items.js");
 
 console.log(itemsRoutes);
 
