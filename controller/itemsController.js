@@ -13,13 +13,13 @@ module.exports = {
 
     additem: (req, res) => {
         db.Item
-          .create(entry)
+          .create()
           .then( () => {
               console.log('success');
           })
     },
 
-    finditem: (entry) => {
+    finditem: (req, res) => {
         db.Item
           .find({})
           .then( (data) => {

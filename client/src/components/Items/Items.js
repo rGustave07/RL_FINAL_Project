@@ -53,7 +53,7 @@ class Items extends React.Component {
               </div>
             </form>
             <Button disabled={!!!this.state.name} onClick={this.handleSubmit.bind(this)} ripple={true}> Submit </Button>
-            { this.state.items.length !== 0 && this.state.items.map(e => genCard(e, nameToEnd(e))) }
+            {/* { this.state.items.length !== 0 && this.state.items.map(e => genCard(e, nameToEnd(e))) } */}
           </div>
 
         </ContainerCard>
