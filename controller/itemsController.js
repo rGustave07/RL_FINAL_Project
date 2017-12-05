@@ -15,16 +15,17 @@ module.exports = {
         db.Item
           .create()
           .then( () => {
-              console.log('success');
+              // console.log('success');
           })
     },
 
     finditem: (req, res) => {
         db.Item
-          .find({})
+          .find(req.params.name)
           .then( (data) => {
-              return data;
-              console.log(data);
+              res.json(data);
+              console.log("success");
+              console.log(req.params.name);
           })
     }
 }

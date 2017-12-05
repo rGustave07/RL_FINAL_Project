@@ -17,7 +17,7 @@ router.route("/category/:category")
       .get((req, res) => res.json("Success"));
 
 router.route("/name/:name")
-      .get( (req, res) => res.json("Success"));
+      .get(iC.finditem);
 
 
 module.exports = router;

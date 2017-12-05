@@ -20,7 +20,7 @@ let dataArr = [];
 // Set up promises with mongoose
 mongoose.Promise = global.Promise;
 // Connect to the Mongo DB
-mongoose.connect('mongodb://localhost/test', { useMongoClient: true });
+// mongoose.connect('mongodb://localhost/test', { useMongoClient: true });
 
 mongoose.connection.on('connected', () => {
   console.log('mongoose is connected');
