@@ -13,7 +13,7 @@ module.exports = {
 
     additem: (data) => {
         db.Item
-          .create(data)
+          .create()
           .then( () => {
               // console.log('success');
           })
