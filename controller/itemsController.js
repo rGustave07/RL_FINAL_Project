@@ -11,31 +11,37 @@ module.exports = {
           .catch(err => res.status(422).json(err));
     },
 
-    additem: (req, res) => {
+    additem: (data) => {
         db.Item
-          .create()
+          .create(data)
           .then( () => {
               // console.log('success');
+          })
+          .catch( err => {
+            if (err) {
+              console.log(err);
+            }
           })
     },
 
     finditem: (req, res) => {
         db.Item
-          .find({category: req.params.name})
+          .find({itemName: req.params.name})
           .then( data => {
               res.json(data);
-              console.log("success");
-              console.log(req.params.name);
+          })
+          .catch( err => {
+              console.log("error:", err);
           })
     },
 
     findCategory: (req, res) => {
         db.Item
-          .find({category: req.params.name})
+          .find({category: req.params.category})
           .then( data => {
-              // res.json(data);
+              res.json(data);
               console.log("success", req.params.name);
-              console.log(data);
+              console.log(req.params);
           })
     }
 }

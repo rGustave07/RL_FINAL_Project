@@ -20,11 +20,11 @@ let dataArr = [];
 // Set up promises with mongoose
 mongoose.Promise = global.Promise;
 // Connect to the Mongo DB
-// mongoose.connect('mongodb://localhost/test', { useMongoClient: true });
+mongoose.connect('mongodb://localhost/rlitems', { useMongoClient: true });
 
 mongoose.connection.on('connected', () => {
   console.log('mongoose is connected');
-  iC.additem({category: "this ish", itemName: "test"});
+  // iC.additem({category: "this ish", itemName: "test"});
   let fileNames = fs.readdirSync(dir, {
       encoding: 'utf-8'
     })
@@ -33,14 +33,14 @@ mongoose.connection.on('connected', () => {
     });
 
   fileNames.forEach(file => {
-    // data.category = file.replace(".csv", "");
+    data.category = file.replace(".csv", "");
     let items = fs.readFileSync(path.join(dir, file), {encoding: 'utf-8'}).split('\n');
     items.map( item => {
         data.category = file.replace(".csv", "");
         data.itemName = item.slice(0,item.length-1);
-        // console.log(data);
+        console.log(data);
         // Succesfully getting data returned, start seeding DB
-        // iC.additem(data);
+        iC.additem(data);
     });
   });
 });

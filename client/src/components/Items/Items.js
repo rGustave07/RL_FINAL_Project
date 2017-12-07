@@ -18,6 +18,7 @@ const genCard = (title, imgEnd) => (
 );
 
 const nameToEnd = name => (name.replace(" ", "_") + ".png");
+let dataArr = [];
 
 class Items extends React.Component {
   state = {
@@ -34,9 +35,11 @@ class Items extends React.Component {
   handleSubmit(e) {
       e.preventDefault();
       API.searchName(this.state.name)
-         .then(res => {
-           this.setState({ items: res.data })
-           console.log("Back");
+         .then( res => {
+           this.setState({ items: res.data });
+         })
+         .catch(err => {
+            console.log(err);
          });
   }
 
@@ -44,9 +47,11 @@ class Items extends React.Component {
       e.preventDefault();
       API.searchCategory(this.state.name)
          .then( res => {
-            this.setState({ items: res.data})
-            console.log("Back");
+            this.setState({items: res.data})
          })
+         .catch( err => {
+            console.log(err);
+         });
   }
 
   render() {
@@ -63,9 +68,9 @@ class Items extends React.Component {
               </div>
             </form>
             <Button disabled={!!!this.state.name} onClick={this.handleSubmit.bind(this)} ripple={true}> Submit </Button>
-            {/* { this.state.items.length !== 0 && this.state.items.map(e => genCard(e, nameToEnd(e))) } */}
+            { this.state.items.length !== 0 && this.state.items.map(item => {console.log(item)}) }
           </div>
-
+          {/* genCard(e, nameToEnd(e)) */}
         </ContainerCard>
       </div>
     </div>
