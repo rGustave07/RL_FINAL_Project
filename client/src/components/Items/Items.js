@@ -32,11 +32,21 @@ class Items extends React.Component {
   }
 
   handleSubmit(e) {
-    e.preventDefault();
-    API.searchName(this.state.name)
-       .then(res => {
-         console.log(res.data);
-        this.setState({ items: res.data }) });
+      e.preventDefault();
+      API.searchName(this.state.name)
+         .then(res => {
+           this.setState({ items: res.data })
+           console.log("Back");
+         });
+  }
+
+  handleSubmitCategory(e) {
+      e.preventDefault();
+      API.searchCategory(this.state.name)
+         .then( res => {
+            this.setState({ items: res.data})
+            console.log("Back");
+         })
   }
 
   render() {

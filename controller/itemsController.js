@@ -21,11 +21,21 @@ module.exports = {
 
     finditem: (req, res) => {
         db.Item
-          .find(req.params.name)
-          .then( (data) => {
+          .find({category: req.params.name})
+          .then( data => {
               res.json(data);
               console.log("success");
               console.log(req.params.name);
+          })
+    },
+
+    findCategory: (req, res) => {
+        db.Item
+          .find({category: req.params.name})
+          .then( data => {
+              // res.json(data);
+              console.log("success", req.params.name);
+              console.log(data);
           })
     }
 }

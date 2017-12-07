@@ -14,7 +14,7 @@ function findNameMatch(name, obj) {
 }
 
 router.route("/category/:category")
-      .get((req, res) => res.json("Success"));
+      .get(iC.findCategory);
 
 router.route("/name/:name")
       .get(iC.finditem);
