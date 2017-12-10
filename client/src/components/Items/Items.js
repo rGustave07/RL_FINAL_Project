@@ -5,9 +5,9 @@ import ContainerCard from "../ContainerCard";
 import API from "../../utils/API";
 
 const genCard = (title, imgEnd) => (
-  <Card key={title} shadow={0} style={{ width: '512px', margin: 'auto' }}>
+  <Card key={title} shadow={0} style={{ width: '240', height: '200', margin: 'auto auto 15px auto', alignItems:'center' }}>
     <CardTitle> {title}</CardTitle>
-    <img src={`/images/items/${imgEnd}`} />
+    <img src={`/images/items/${imgEnd}`} style={{width:'220px', height:'220px', objectFit: 'cover'}}/>
     <CardActions border>
       <Button colored>Save</Button>
     </CardActions>
@@ -59,17 +59,17 @@ class Items extends React.Component {
       <a name="top"></a>
       <div className="android-be-together-section mdl-typography--text-center">
 
-        <ContainerCard title="Stats Search">
-          <div className="flex">
+        <ContainerCard title="Items Search">
+          <div className="flex search-bar">
             <form action="#">
               <div className="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                 <input className="mdl-textfield__input" type="text" id="sample3" onChange={this.handleText} value={this.state.name} />
                 <label className="mdl-textfield__label" htmlFor="sample3">Enter Name</label>
               </div>
             </form>
-            <Button disabled={!!!this.state.name} onClick={this.handleSubmit.bind(this)} ripple={true}> Submit </Button>
-            { this.state.items.length !== 0 && this.state.items.map(item => genCard(item.itemName, nameToEnd(item.itemName))) }
+            <Button disabled={!!!this.state.name} onClick={this.handleSubmitCategory.bind(this)} ripple={true}> Submit </Button>
           </div>
+            { this.state.items.length !== 0 && this.state.items.map(item => genCard(item.itemName, nameToEnd(item.itemName))) }
           {/* genCard(e, nameToEnd(e)) */}
         </ContainerCard>
       </div>
