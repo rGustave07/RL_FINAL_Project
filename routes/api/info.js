@@ -10,6 +10,7 @@ const skillSearch = (req, res) => {
                  axios.get(`https://api.rocketleague.com/api/v1/steam/playerskills/${response.data.response.steamid}`, { headers: { Authorization: `Token ${ APIKEY }` } })
                       .then((response) => {
                          const data = response.data[0].player_skills;
+                         console.log(response);
                          res.json(data);
                      })
          })
@@ -18,6 +19,10 @@ const skillSearch = (req, res) => {
                  console.log(err);
              }
          })
+}
+
+const statsSerch = (req, res) => {
+
 }
 
 router.route("/:id")

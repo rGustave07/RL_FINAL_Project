@@ -2,6 +2,7 @@ import React from "react";
 import "./Stats.css";
 import { Content, Button } from 'react-mdl';
 import ContainerCard from "../ContainerCard";
+import Chart1 from "../Chart1";
 import API from "../../utils/API";
 
 class Stats extends React.Component {
@@ -9,7 +10,7 @@ class Stats extends React.Component {
     id: 1234567,
     stats: []
   }
-
+  
   handleText = event => {
     this.setState({ id: event.target.value });
   }
@@ -17,7 +18,14 @@ class Stats extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     API.searchInfo(this.state.id)
-       .then(res => this.setState({ stats: res.data }));
+       .then(res => {
+          this.setState({ stats: res.data });
+          console.log(res.data);
+       });
+  }
+
+  setupChartData(){
+
   }
 
   render() {
@@ -74,6 +82,7 @@ class Stats extends React.Component {
           </table>)
           }
         </ContainerCard>
+        <Chart1 data={this.state.stats}/>
       </div>
     </div>
   }
