@@ -3,6 +3,8 @@ import "./Items.css";
 import { Content, Button, Card, CardTitle, CardText, CardMenu, CardActions, IconButton } from 'react-mdl';
 import ContainerCard from "../ContainerCard";
 import API from "../../utils/API";
+import Buttons from "../Buttons";
+
 
 const genCard = (title, imgEnd) => (
   <Card key={title} shadow={0} style={{ width: '512px', margin: 'auto' }}>
@@ -62,6 +64,7 @@ class Items extends React.Component {
         <ContainerCard title="Stats Search">
           <div className="flex">
             <form action="#">
+              <Buttons></Buttons>
               <div className="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                 <input className="mdl-textfield__input" type="text" id="sample3" onChange={this.handleText} value={this.state.name} />
                 <label className="mdl-textfield__label" htmlFor="sample3">Enter Name</label>
