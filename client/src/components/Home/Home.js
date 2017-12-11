@@ -1,6 +1,7 @@
 import React from "react";
 import "./Home.css";
 import { Content } from 'react-mdl'
+import NewsCont from "../NewsCont";
 
 const Home = props =>
     <div>
@@ -18,6 +19,7 @@ const Home = props =>
             <a href="/items" className="android-link mdl-typography--font-light">GET STATS!</a>
           </p>
         </div>
+        <NewsCont />
         <div className="android-customized-section-image"></div>
       </div>
     </div>

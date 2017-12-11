@@ -1,0 +1,38 @@
+[
+  {
+    "img":     "/images/news/news1.jpg",
+    "title":   "Rocket League Takes Over ELEAGUE!",
+    "summary": "For Rocket League Esports, 2017 has been nothing short of a monumental year. Following two RLCS seasons, the X GAMES, the Universal Open, Collegiate Rocket League and two DreamHack Championships; we're just days away from kicking off the first-ever, Rocket League and ELEAGUE collaboration! Presented by Turner and IMG, The ELEAGUE Cup: Rocket League will take eight of the top teams and have them clash for the final time in 2017. Not only will the event be broadcast live from the ELEAGUE Arena at Turner Studios in Atlanta, but teams will have a chance at a $150,000 prize pool!",
+    "link":    "https://www.rocketleague.com/news/rocket-league-takes-over-eleague-/"
+  },
+  {
+    "img": "/images/news/news2.jpg",
+    "title": "Community Spotlight: Back to Basics",
+    "summary": "In a month packed with Rocket League history, we saw the first-ever player to claim back-to-back RLCS World Championships (that would be Turbopolsa, btw, congratulations to him!) and our official release on Nintendo Switch! While our last Community Spotlight put Rocket League pro players center-stage, we’re shifting gears this month to focus on giving new Rocket League players, particularly those playing on the Switch, a solid ‘Custom Training’ foundation for practice.",
+    "link": "https://www.rocketleague.com/news/community-spotlight-back-to-basics/"
+  },
+  {
+    "img": "/images/news/news3.jpg",
+    "title": "Incoming: Adjustments to Competitive Matchmaking Bans",
+    "summary": "Nothing beats the thrill of Competitive play in Rocket League! Whether you’re putting in the time to hit your Rank goal, grinding out Season Reward Level wins, or jumping into high-level play for the first time, you always want a fair experience going into a Competitive match -- and so do we!",
+    "link": "https://www.rocketleague.com/news/adjustments-competitive-matchmaking-bans/"
+  },
+  {
+    "img": "/images/news/news4.jpg",
+    "title": "CRL National Championships on the Horizon!",
+    "summary": "It’s been a long time coming, but the first-ever Collegiate Rocket League - National Championship will finally take place this weekend! What started three months ago with over 200 schools has come down to the eight best collegiate teams in North America. Who can rise above the rest and claim the first ever CRL National Championship? Let's see who's in the running...",
+    "link": "https://www.rocketleague.com/news/crl-national-championships-on-the-horizon-/"
+  },
+  {
+    "img": "/images/news/news5.jpg",
+    "title": "Velocity Crate Starts Dropping on December 4",
+    "summary": "Our new ‘Velocity Crate’ debuts this Monday, December 4 with a new Battle-Car at center stage. The 'Imperator DT5' is ripped right out of your synthwave- and futurism-fueled dreams along with six new Decals and Engine Audio that can be used on most of the other Battle-Cars in your Garage.",
+    "link": "https://www.rocketleague.com/news/velocity-crate-december-4/"
+  },
+  {
+    "img": "/images/news/news6.jpg",
+    "title": "Frosty Fest Begins on December 11",
+    "summary": "Starting December 11 at 5pm PST (8pm EST, 2am CET on December 12), Frosty Fest is based on the same kind of in-game Event you experienced previously with Haunted Hallows back in October. As you'd expect, the Event format is the same as Haunted Hallows, with ‘Snowflakes’ currency replacing the Candy Corn you earned with every completed Online Match. You can redeem Snowflakes to purchase Event items, Decryptors, or the brand new ‘Frosty Fest’ Event Crate!",
+    "link": "https://www.rocketleague.com/news/frosty-fest-begins-on-december-11/"
+  }
+]

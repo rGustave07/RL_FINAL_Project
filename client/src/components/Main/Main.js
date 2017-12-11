@@ -5,6 +5,7 @@ import Home from "../Home";
 import Stats from "../Stats";
 import Items from "../Items";
 import { Switch, Route } from "react-router-dom";
+import Footer from "../Footer";
 
 const Main = props =>
   <Content className="android-content">
@@ -13,6 +14,7 @@ const Main = props =>
       <Route path="/stats" component={Stats} />
       <Route path="/items" component={Items} />
     </Switch>
+    <Footer />
   </Content>
 
 export default Main;
