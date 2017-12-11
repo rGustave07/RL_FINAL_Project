@@ -18,7 +18,7 @@ const genCard = (title, imgEnd) => (
 );
 
 const nameToEnd = name => (name.replace(" ", "_") + ".png");
-let dataArr = [];
+let categories = ["Wheels", "Bodies", "Antennas", "Banners", "Boosts", "Decals", "Explosions", "Paints", "Toppers", "Trails"];
 
 class Items extends React.Component {
   state = {
@@ -33,7 +33,8 @@ class Items extends React.Component {
   }
 
   handleSubmit(e) {
-      e.preventDefault();
+      // e.preventDefault();
+      console.log("ran");
       API.searchName(this.state.name)
          .then( res => {
            this.setState({ items: res.data });
@@ -44,7 +45,8 @@ class Items extends React.Component {
   }
 
   handleSubmitCategory(e) {
-      e.preventDefault();
+      // e.preventDefault();
+      console.log("ran");
       API.searchCategory(this.state.name)
          .then( res => {
             this.setState({items: res.data})
@@ -52,6 +54,16 @@ class Items extends React.Component {
          .catch( err => {
             console.log(err);
          });
+  }
+
+  handler (){
+    if (categories.includes(this.state.name)) {
+        this.handleSubmitCategory();
+        console.log("Here1");
+    } else {
+        this.handleSubmit();
+        console.log("Here2");
+    }
   }
 
   render() {
@@ -67,7 +79,7 @@ class Items extends React.Component {
                 <label className="mdl-textfield__label" htmlFor="sample3">Enter Name</label>
               </div>
             </form>
-            <Button disabled={!!!this.state.name} onClick={this.handleSubmitCategory.bind(this)} ripple={true}> Submit </Button>
+            <Button disabled={!!!this.state.name} onClick={this.handler.bind(this)} ripple={true}> Submit </Button>
           </div>
             { this.state.items.length !== 0 && this.state.items.map(item => genCard(item.itemName, nameToEnd(item.itemName))) }
           {/* genCard(e, nameToEnd(e)) */}

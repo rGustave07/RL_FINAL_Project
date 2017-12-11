@@ -29,6 +29,7 @@ module.exports = {
           .find({itemName: req.params.name})
           .then( data => {
               res.json(data);
+              console.log(data);
           })
           .catch( err => {
               console.log("error:", err);
