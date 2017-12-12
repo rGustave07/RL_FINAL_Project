@@ -9,5 +9,8 @@ export default {
   },
   searchInfo: function(term) {
     return axios.get(`/api/info/${term}`);
+  },
+  searchStats: function(term){
+    return axios.get(`/api/info/gasRoute/${term}`)
   }
 }
