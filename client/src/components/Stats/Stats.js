@@ -8,7 +8,9 @@ import API from "../../utils/API";
 class Stats extends React.Component {
   state = {
     id: 1234567,
-    stats: []
+    stats: [],
+    GAS: {}
+    //gas stands for GOALS ASSISTS SAVES
   }
 
   handleText = event => {
@@ -22,6 +24,7 @@ class Stats extends React.Component {
           this.setState({ stats: res.data });
           console.log(res.data);
        });
+       // Create another API.searchinfo function that hits a different route
   }
 
   render() {
@@ -78,6 +81,7 @@ class Stats extends React.Component {
             </tbody>
           </table>)
           } */}
+          {/* Add another chart */}
         </ContainerCard>
       </div>
     </div>
