@@ -11,6 +11,6 @@ export default {
     return axios.get(`/api/info/${term}`);
   },
   searchStats: function(term){
-    return axios.get(`/api/info/gasRoute/${term}`)
+    return axios.get(`/api/gasinfo/gas/${term}`)
   }
 }

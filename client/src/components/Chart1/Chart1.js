@@ -16,7 +16,7 @@ class Chart1 extends Component{
               props.data[2].skill,
               props.data[3].skill
             ],
-            backgroundColor: 'green'
+            backgroundColor: 'grey'
           }]
         }
     }

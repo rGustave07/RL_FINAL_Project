@@ -8,17 +8,18 @@ const getGoals  = (req, res) => {
     let returnArr = [];
     axios.get(`https://api.steampowered.com/ISteamUser/ResolveVanityURL/v1/?key=${STEAMKEY}&vanityurl=${req.params.id}`)
          .then( response => {
-                gas.forEach( stat => {
-                    axios.get(`https://api.rocketleague.com/api/v1/steam/leaderboard/stats/${stat}/${response.data.response.steamid}`, { headers: { Authorization: `Token ${ APIKEY }` } })
+                for (var i = 0; i < gas.length; i++) {
+                    axios.get(`https://api.rocketleague.com/api/v1/steam/leaderboard/stats/${gas[i]}/${response.data.response.steamid}`, { headers: { Authorization: `Token ${ APIKEY }` } })
                     .then((response) => {
-                        returnArr.push(response)
+                        console.log(response.data[0].stat_type);
+                        returnArr.push(`${response.data[0].stat_type}: ${response.data[0].value}`);
                         if (returnArr.length === 6) {
                             res.json(returnArr);
                         }
-
                     })
-                })
-         })
+                  }
+
+          })
          .catch( err => {
              if (err) {
                  console.log(err);
