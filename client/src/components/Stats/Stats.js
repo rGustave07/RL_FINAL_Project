@@ -10,7 +10,7 @@ class Stats extends React.Component {
     id: 1234567,
     stats: []
   }
-  
+
   handleText = event => {
     this.setState({ id: event.target.value });
   }
@@ -22,10 +22,6 @@ class Stats extends React.Component {
           this.setState({ stats: res.data });
           console.log(res.data);
        });
-  }
-
-  setupChartData(){
-
   }
 
   render() {
@@ -43,7 +39,8 @@ class Stats extends React.Component {
             </form>
             <Button disabled={!!!this.state.id} onClick={this.handleSubmit.bind(this)} ripple={true}> Submit </Button>
           </div>
-          {
+          {this.state.stats.length !== 0 && (<Chart1 data={this.state.stats}/>)}
+          {/* {
             this.state.stats.length !== 0 && (<table className="mdl-data-table mdl-js-data-table">
             <thead>
               <tr>
@@ -80,9 +77,8 @@ class Stats extends React.Component {
               </tr>
             </tbody>
           </table>)
-          }
+          } */}
         </ContainerCard>
-        <Chart1 data={this.state.stats}/>
       </div>
     </div>
   }

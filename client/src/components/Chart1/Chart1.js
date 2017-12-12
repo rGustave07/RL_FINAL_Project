@@ -5,17 +5,16 @@ import {Bar, Line, Pie, Doughnut, Radar} from 'react-chartjs-2';
 class Chart1 extends Component{
   constructor(props){
     super(props);
-    console.log(props);
     this.state = {
         chartData: {
           labels: ['Playlist 10', 'Playlist 11', 'Playlist 12', 'Playlist 13'],
           datasets:[{
             label: 'Performance Relative to Max',
             data: [
-              245,
-              333,
-              222,
-              432
+              props.data[0].skill,
+              props.data[1].skill,
+              props.data[2].skill,
+              props.data[3].skill
             ],
             backgroundColor: 'green'
           }]
@@ -25,7 +24,7 @@ class Chart1 extends Component{
 
   render(){
     return(
-      <ContainerCard title="Graph">
+      <ContainerCard title="Advanced Stats">
         <div className='Chart1'>
           <Radar
             data={this.state.chartData}
