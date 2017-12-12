@@ -9,7 +9,7 @@ class Stats extends React.Component {
   state = {
     id: 1234567,
     stats: [],
-    GAS: []
+    GAS: {}
     //gas stands for GOALS ASSISTS SAVES
   }
 
@@ -27,8 +27,12 @@ class Stats extends React.Component {
        // Create another API.searchinfo function that hits a different route
     API.searchStats(this.state.id)
        .then( res => {
+          let setobj = [];
+          res.data.forEach( element => {
+              console.log(parseInt(element.slice(7,10)));
+          })
           console.log(res.data);
-          this.setState({ GAS: res.data});
+          // this.setState({ GAS: res.data});
        })
   }
 
