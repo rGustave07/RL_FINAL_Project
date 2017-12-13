@@ -21,8 +21,10 @@ class Stats extends React.Component {
   genChart = () => {
     return (
         <div>
-          <Chart1 data={this.state.stats}/>
-          <Chart2 data={this.state.gas}/>
+          <ContainerCard title="Advanced Stats">
+            <Chart1 data={this.state.stats}/>
+            <Chart2 data={this.state.gas}/>
+          </ContainerCard>
         </div>
     )
   }

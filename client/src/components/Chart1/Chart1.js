@@ -25,7 +25,6 @@ class Chart1 extends Component{
 
   render(){
     return(
-      <ContainerCard title="Advanced Stats">
         <div className='Chart1'>
           <Radar
             data={this.state.chartData}
@@ -36,7 +35,6 @@ class Chart1 extends Component{
             }
           />
         </div>
-      </ContainerCard>
     )
   }
 }
