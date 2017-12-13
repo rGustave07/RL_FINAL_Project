@@ -18,7 +18,8 @@ class Chart1 extends Component{
             ],
             backgroundColor: 'grey'
           }]
-        }
+        },
+        data2: props.data2
     }
   }
 

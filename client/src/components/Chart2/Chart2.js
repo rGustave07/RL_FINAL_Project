@@ -4,19 +4,20 @@ import {Bar, Line, Pie, Doughnut, Radar} from 'react-chartjs-2';
 
 class Chart2 extends Component{
   constructor(props){
+    console.log(props.data.assists);
     super(props);
     this.state = {
         chartData: {
-          labels: ['Playlist 10', 'Playlist 11', 'Playlist 12', 'Playlist 13'],
+          labels: ['assists', 'goals', 'mvps', 'saves', 'shots', 'wins'],
           datasets:[{
-            label: 'Performance Relative to Max',
-            data: [
-              props.data[0].skill,
-              props.data[1].skill,
-              props.data[2].skill,
-              props.data[3].skill
-            ],
-            backgroundColor: 'grey'
+            label: 'Performance Overlook',
+            data: [props.data.assists,
+                   props.data.goals,
+                   props.data.mvps,
+                   props.data.saves,
+                   props.data.shots,
+                   props.data.wins],
+            backgroundColor: ['blue','red','yellow','orange','black','green']
           }]
         }
     }
@@ -25,7 +26,7 @@ class Chart2 extends Component{
   render(){
     return(
         <div className='Chart1'>
-          <Radar
+          <Doughnut
             data={this.state.chartData}
             height={250}
             width={300}
