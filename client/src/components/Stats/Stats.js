@@ -31,6 +31,8 @@ class Stats extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    this.setState({stats: []});
+    this.setState({gas: null});
     API.searchInfo(this.state.id)
        .then(res => {
           this.setState({ stats: res.data });
