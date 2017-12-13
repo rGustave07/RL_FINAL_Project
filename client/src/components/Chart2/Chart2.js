@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import ContainerCard from "../ContainerCard";
-import {Bar, Line, Pie, Doughnut, Radar} from 'react-chartjs-2';
+import {Doughnut, Polar} from 'react-chartjs-2';
 
 class Chart2 extends Component{
   constructor(props){
@@ -26,7 +26,7 @@ class Chart2 extends Component{
   render(){
     return(
         <div className='Chart1'>
-          <Doughnut
+          <Polar
             data={this.state.chartData}
             height={250}
             width={300}
