@@ -1,11 +1,11 @@
 import React from "react";
 import "./Home.css";
-import { Content } from 'react-mdl'
+// import { Content } from 'react-mdl';
 import NewsCont from "../NewsCont";
 
 const Home = props =>
     <div>
-      <a name="top"></a>
+      {/* <a name="top"></a> */}
       <div className="android-be-together-section mdl-typography--text-center">
         <div className="logo-font android-slogan">Rocket Stats</div>
         <div className="logo-font android-sub-slogan">Your source for Rocket League stats data and item infomation.</div>

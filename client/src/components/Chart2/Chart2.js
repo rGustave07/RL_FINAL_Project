@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import ContainerCard from "../ContainerCard";
-import {Doughnut, Polar} from 'react-chartjs-2';
+import {Polar} from 'react-chartjs-2';
 
 class Chart2 extends Component{
   constructor(props){
