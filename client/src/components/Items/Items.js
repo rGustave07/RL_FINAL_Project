@@ -1,13 +1,13 @@
 import React from "react";
 import "./Items.css";
-import { Content, Button, Card, CardTitle, CardText, CardMenu, CardActions, IconButton } from 'react-mdl';
+import { Button, Card, CardTitle, CardMenu, CardActions, IconButton } from 'react-mdl';
 import ContainerCard from "../ContainerCard";
 import API from "../../utils/API";
 
 const genCard = (title, imgEnd) => (
   <Card key={title} shadow={0} style={{ width: '240', height: '200', margin: 'auto auto 15px auto', alignItems:'center' }}>
     <CardTitle> {title}</CardTitle>
-    <img src={`/images/items/${imgEnd}`} style={{width:'220px', height:'220px', objectFit: 'cover'}}/>
+    <img src={`/images/items/${imgEnd}`} alt="" style={{width:'220px', height:'220px', objectFit: 'cover'}}/>
     <CardActions border>
       <Button colored>Save</Button>
     </CardActions>

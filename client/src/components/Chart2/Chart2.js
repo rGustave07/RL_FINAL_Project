@@ -3,7 +3,6 @@ import {Polar} from 'react-chartjs-2';
 
 class Chart2 extends Component{
   constructor(props){
-    console.log(props.data.assists);
     super(props);
     this.state = {
         chartData: {

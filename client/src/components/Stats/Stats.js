@@ -8,7 +8,7 @@ import API from "../../utils/API";
 
 class Stats extends React.Component {
   state = {
-    id: 1234567,
+    id: "",
     stats: [],
     gas: null,
     //gas stands for GOALS ASSISTS SAVES
@@ -20,7 +20,7 @@ class Stats extends React.Component {
 
   genChart = () => {
     return (
-        <div>
+        <div style={{marginRight: 5 + 'em'}}>
           <ContainerCard title="Advanced Stats">
             <Chart1 data={this.state.stats}/>
             <Chart2 data={this.state.gas}/>
@@ -36,7 +36,6 @@ class Stats extends React.Component {
     API.searchInfo(this.state.id)
        .then(res => {
           this.setState({ stats: res.data });
-          console.log(res.data);
        });
        // Create another API.searchinfo function that hits a different route
     API.searchStats(this.state.id)
@@ -55,7 +54,7 @@ class Stats extends React.Component {
             <form action="#">
               <div className="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                 <input className="mdl-textfield__input" type="text" id="sample3" onChange={this.handleText} value={this.state.id} />
-                <label className="mdl-textfield__label" htmlFor="sample3">Enter Steam ID</label>
+                <label className="mdl-textfield__label" htmlFor="sample3">Enter Steam vanityurl(ID)</label>
               </div>
             </form>
             <Button disabled={!!!this.state.id} onClick={this.handleSubmit.bind(this)} ripple={true}> Submit </Button>
