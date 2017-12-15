@@ -69,7 +69,7 @@ class Items extends React.Component {
   render() {
     return <div>
       <a name="top"></a>
-      <div className="android-be-together-section mdl-typography--text-center">
+      <div className="android-be-together-section mdl-typography--text-center" style={{overflowY:'scroll'}}>
 
         <ContainerCard title="Items Search">
           <div className="flex search-bar">

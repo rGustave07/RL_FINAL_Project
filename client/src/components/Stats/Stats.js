@@ -20,7 +20,7 @@ class Stats extends React.Component {
 
   genChart = () => {
     return (
-        <div style={{marginRight: 5 + 'em'}}>
+        <div>
           <ContainerCard title="Advanced Stats">
             <Chart1 data={this.state.stats}/>
             <Chart2 data={this.state.gas}/>
@@ -47,7 +47,6 @@ class Stats extends React.Component {
 
   render() {
     return <div>
-      <a name="top">View your statistics</a>
       <div className="android-be-together-section mdl-typography--text-center">
         <ContainerCard title="Stats Search">
           <div className="flex">
