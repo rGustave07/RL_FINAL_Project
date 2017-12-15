@@ -10,7 +10,7 @@ const Home = props =>
       {/* <div className="logo-font android-slogan">Rocket Stats</div>
       <div className="logo-font android-sub-slogan">Your source for Rocket League stats data and item infomation.</div> */}
       <Card shadow={0} style={{width: '800px', margin: 'auto', position:'relative', top:'160px'}}>
-          <CardTitle style={{color: '#fff', height: '176px', background: 'url(./images/rl4.jpg) center / cover'}}>Welcome</CardTitle>
+          <CardTitle style={{color: '#fff', height: '300px', background: 'url(./images/1300113.jpeg) center / cover'}}>Welcome</CardTitle>
           <CardText>
               Your source for Rocket League stats data and item infomation.
           </CardText>

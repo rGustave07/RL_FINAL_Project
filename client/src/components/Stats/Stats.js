@@ -1,6 +1,6 @@
 import React from "react";
 import "./Stats.css";
-import { Button } from 'react-mdl';
+import { Button, Card } from 'react-mdl';
 import ContainerCard from "../ContainerCard";
 import Chart1 from "../Chart1";
 import Chart2 from "../Chart2";
@@ -21,10 +21,12 @@ class Stats extends React.Component {
   genChart = () => {
     return (
         <div>
-          <ContainerCard title="Advanced Stats">
-            <Chart1 data={this.state.stats}/>
-            <Chart2 data={this.state.gas}/>
-          </ContainerCard>
+          {/* <ContainerCard title="Advanced Stats"> */}
+          <Card style={{}}>
+              <Chart1 data={this.state.stats}/>
+              <Chart2 data={this.state.gas}/>
+          </Card>
+          {/* </ContainerCard> */}
         </div>
     )
   }
