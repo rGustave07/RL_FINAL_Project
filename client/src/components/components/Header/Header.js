@@ -1,13 +1,14 @@
 import React from "react";
 import "./Header.css";
-import { Header as HeaderMDL, HeaderRow, Navigation, Spacer } from 'react-mdl';
+import NewsCont from "../NewsCont";
+import { Header as HeaderMDL, HeaderRow, Navigation, Spacer, Layout, Content, Drawer, HeaderTabs, Tab, Textfield } from 'react-mdl';
 
 const Header = props =>{
   return(
     <HeaderMDL waterfall={true}>
       <HeaderRow className="android-header">
         <span className="android-title mdl-layout-title">
-          <a className="statsTitle" href="/">Rocket Stats</a>
+          <a class="statsTitle" href="/">Rocket Stats</a>
         </span>
         <Spacer />
         <div className="android-navigation-container">

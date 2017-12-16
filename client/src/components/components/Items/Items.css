@@ -1,0 +1,9 @@
+.flex {
+  display: flex;
+  flex-direction: column;
+  margin-right: 32px;
+}
+
+.search-bar {
+  width:100%;
+}

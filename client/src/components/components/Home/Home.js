@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css";
-import { Card, CardText, CardActions, CardTitle, Button, CardMenu, IconButton } from 'react-mdl';
+import { Content, Card, CardText, CardActions, CardTitle, Button, CardMenu, IconButton } from 'react-mdl';
 import NewsCont from "../NewsCont";
 
 const Home = props =>

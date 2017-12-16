@@ -1,10 +1,10 @@
 import React from "react";
 import "./Stats.css";
-import { Button } from 'react-mdl';
+import { Button, Card } from 'react-mdl';
 import ContainerCard from "../ContainerCard";
 import Chart1 from "../Chart1";
 import Chart2 from "../Chart2";
-import StatsCard from "../StatsCard";
+import NewsCard from "../NewsCard";
 import API from "../../utils/API";
 
 class Stats extends React.Component {
@@ -21,10 +21,10 @@ class Stats extends React.Component {
 
   genChart = () => {
     return (
-          <StatsCard title="charts">
+          <NewsCard title="charts">
               <Chart1 data={this.state.stats}/>
               <Chart2 data={this.state.gas}/>
-          </StatsCard>
+          </NewsCard>
     )
   }
 
